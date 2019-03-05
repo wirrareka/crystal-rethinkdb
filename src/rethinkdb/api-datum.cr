@@ -278,6 +278,10 @@ module RethinkDB
       DatumTerm.new(TermType::LIMIT, [self, count])
     end
 
+    def skip(count)
+      DatumTerm.new(TermType::SKIP, [self, count])
+    end
+
     def sum
       DatumTerm.new(TermType::SUM, [self])
     end
